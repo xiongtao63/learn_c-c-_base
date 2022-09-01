@@ -1,7 +1,7 @@
 /*
  * @Author       : xiongtao
  * @Date         : 2022-09-01 15:20:55
- * @LastEditTime : 2022-09-01 16:14:31
+ * @LastEditTime : 2022-09-01 16:07:50
  * @LastEditors  : xiongtao
  * @Logs         : 算术运算符
  *
@@ -152,94 +152,58 @@ int main2(int argc, char const *argv[])
 int main3(int argc, char const *argv[])
 {
   int a = 21;
-  int c;
-
-  c = a;
-  printf("Line 1 - =  运算符实例，c 的值 = %d\n", c);
-
-  c += a;
-  printf("Line 2 - += 运算符实例，c 的值 = %d\n", c);
-
-  c -= a;
-  printf("Line 3 - -= 运算符实例，c 的值 = %d\n", c);
-
-  c *= a;
-  printf("Line 4 - *= 运算符实例，c 的值 = %d\n", c);
-
-  c /= a;
-  printf("Line 5 - /= 运算符实例，c 的值 = %d\n", c);
-
-  c = 200;
-  c %= a;
-  printf("Line 6 - %%= 运算符实例，c 的值 = %d\n", c);
-
-  c <<= 2;
-  printf("Line 7 - <<= 运算符实例，c 的值 = %d\n", c);
-
-  c >>= 2;
-  printf("Line 8 - >>= 运算符实例，c 的值 = %d\n", c);
-
-  c &= 2;
-  printf("Line 9 - &= 运算符实例，c 的值 = %d\n", c);
-
-  c ^= 2;
-  printf("Line 10 - ^= 运算符实例，c 的值 = %d\n", c);
-
-  c |= 2;
-  printf("Line 11 - |= 运算符实例，c 的值 = %d\n", c);
+   int c ;
+ 
+   c =  a;
+   printf("Line 1 - =  运算符实例，c 的值 = %d\n", c );
+ 
+   c +=  a;
+   printf("Line 2 - += 运算符实例，c 的值 = %d\n", c );
+ 
+   c -=  a;
+   printf("Line 3 - -= 运算符实例，c 的值 = %d\n", c );
+ 
+   c *=  a;
+   printf("Line 4 - *= 运算符实例，c 的值 = %d\n", c );
+ 
+   c /=  a;
+   printf("Line 5 - /= 运算符实例，c 的值 = %d\n", c );
+ 
+   c  = 200;
+   c %=  a;
+   printf("Line 6 - %%= 运算符实例，c 的值 = %d\n", c );
+ 
+   c <<=  2;
+   printf("Line 7 - <<= 运算符实例，c 的值 = %d\n", c );
+ 
+   c >>=  2;
+   printf("Line 8 - >>= 运算符实例，c 的值 = %d\n", c );
+ 
+   c &=  2;
+   printf("Line 9 - &= 运算符实例，c 的值 = %d\n", c );
+ 
+   c ^=  2;
+   printf("Line 10 - ^= 运算符实例，c 的值 = %d\n", c );
+ 
+   c |=  2;
+   printf("Line 11 - |= 运算符实例，c 的值 = %d\n", c );
   return 0;
 }
 
+
 // 杂项运算符 ↦ sizeof & 三元
 
-int main4(int argc, char const *argv[])
+int main(int argc, char const *argv[])
 {
   int a = 4;
   short b;
   double c;
   int *ptr;
-  /* sizeof 运算符实例 */
-  printf("Line 1 - 变量 a 的大小 = %lu\n", sizeof(a));
-  printf("Line 2 - 变量 b 的大小 = %lu\n", sizeof(b));
-  printf("Line 3 - 变量 c 的大小 = %lu\n", sizeof(c));
+     /* sizeof 运算符实例 */
+   printf("Line 1 - 变量 a 的大小 = %lu\n", sizeof(a) );
+   printf("Line 2 - 变量 b 的大小 = %lu\n", sizeof(b) );
+   printf("Line 3 - 变量 c 的大小 = %lu\n", sizeof(c) );
 
-  /* & 和 * 运算符实例 */
-  ptr = &a; /* 'ptr' 现在包含 'a' 的地址 */
-  printf("a  的值是%d\n", a);
-  printf("*ptr   = %d\n", *ptr);
-  printf("&a   = %d\n", &a);
-  printf("ptr   = %d\n", ptr);
-
-  /* 三元运算符实例 */
-  a = 10;
-  b = (a == 1) ? 20 : 30;
-  printf("b 的值是 %d\n", b);
-
-  b = (a == 10) ? 20 : 30;
-  printf("b 的值是 %d\n", b);
   return 0;
 }
 
-//运算优先级
-
-int main(int argc, char const *argv[])
-{
-  int a = 20;
-  int b = 10;
-  int c = 15;
-  int d = 5;
-  int e;
-
-  e = (a + b) * c / d; // ( 30 * 15 ) / 5
-  printf("(a + b) * c / d 的值是 %d\n", e);
-
-  e = ((a + b) * c) / d; // (30 * 15 ) / 5
-  printf("((a + b) * c) / d 的值是 %d\n", e);
-
-  e = (a + b) * (c / d); // (30) * (15/5)
-  printf("(a + b) * (c / d) 的值是 %d\n", e);
-
-  e = a + (b * c) / d; //  20 + (150/5)
-  printf("a + (b * c) / d 的值是 %d\n", e);
-  return 0;
-}

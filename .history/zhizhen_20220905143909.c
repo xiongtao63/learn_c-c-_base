@@ -1,7 +1,7 @@
 /*
  * @Author       : xiongtao
  * @Date         : 2022-09-02 09:27:52
- * @LastEditTime : 2022-09-05 14:49:15
+ * @LastEditTime : 2022-09-05 14:39:08
  * @LastEditors  : xiongtao
  * @Logs         : 指针
  * 
@@ -33,7 +33,7 @@ int main2(int argc, char const *argv[])
   return 0;
 }
 
-int main3(int argc, char const *argv[])
+int main(int argc, char const *argv[])
 {
   ///对指针 进行算数运算 //数组是一块连续内存 分别保存 11-55 //*p1 指向第一个数据 11，移动指针就指向第二个了
   int arr[] = {11, 22, 33, 44, 55};
@@ -46,20 +46,3 @@ int main3(int argc, char const *argv[])
   
   return 0;
 }
-
-int main(int argc, char const *argv[])
-{
-  // 在c语言中，指针和数组名都表示地址
-  //数组是一块内存连续的数据。
-  //指针是指向内存空间的变量。
-  int a[] = {11, 22, 33, 44, 55};
-  //直接输出数组名会得到数组首元素的地址
-  printf("%#x\n", a);
-  printf("%#x\n", &a[0]);
-  printf("%d\n", *a);
-
-  int *p = a;
-
-  return 0;
-}
-

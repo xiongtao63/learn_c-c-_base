@@ -1,7 +1,7 @@
 /*
  * @Author       : xiongtao
  * @Date         : 2022-09-02 09:27:52
- * @LastEditTime : 2022-09-05 14:49:15
+ * @LastEditTime : 2022-09-05 14:47:16
  * @LastEditors  : xiongtao
  * @Logs         : 指针
  * 
@@ -57,9 +57,6 @@ int main(int argc, char const *argv[])
   printf("%#x\n", a);
   printf("%#x\n", &a[0]);
   printf("%d\n", *a);
-
-  int *p = a;
-
   return 0;
 }
 
